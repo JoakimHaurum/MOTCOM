@@ -1,0 +1,9 @@
+VCOM_Features/*
+data/gt/*
+data/MOTCOM/*
+!goutput/Readme.md
+**/__pycache__
+error_log.txt
+*.pth
+*.pkl
+*.pickle

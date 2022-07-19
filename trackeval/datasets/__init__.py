@@ -1,0 +1,1 @@
+from .mot_challenge_motcom import MOTChallengeMOTCOM # NEW
