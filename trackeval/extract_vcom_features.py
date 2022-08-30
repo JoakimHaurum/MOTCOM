@@ -234,7 +234,7 @@ def extract_features_sequence(seq, dataset, tracker, class_list, benchmark, spli
                 features = extractor(t_images.to(device)).detach().cpu().numpy()
 
                 for idx, f in enumerate(frames):
-                    data_features[f] = (features[idx])
+                    data_features[f] = (features[idx],)
 
             # Store the features as a pickle file in the track img folder
             feat_path = os.path.join(seq_features_folder,'features_{}_{}.pickle'.format(extractor_name.lower(), track_id))
