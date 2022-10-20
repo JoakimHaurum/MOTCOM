@@ -19,7 +19,7 @@ We evaluate MOTCOM on the comprehensive MOT17, MOT20, and MOTSynth datasets and 
 
 ## Requirements
 
-Code was tested in virtual environment with Python 3.9. Install requirements as in the requirements.txt file.
+Code was tested in virtual environment with Python 3.8. Install requirements as in the requirements.txt file.
 
 
 ## Data Preparation
