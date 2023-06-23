@@ -24,18 +24,19 @@ Code was tested in virtual environment with Python 3.8. Install requirements as 
 
 ## Data Preparation
 
-The TrackEval repository provide a easy to access [data.zip](https://omnomnom.vision.rwth-aachen.de/data/TrackEval/data.zip).
-Place the *data* folder in the root folder of this repository. Only the *data/gt/mot_challenge* subfolder is required. Note that only the train split is publicly available.
-
+From the TrackEval repository you can download the groundtruth data from the train splits of some of the most widely used MOT benchmark datasets: [data.zip](https://omnomnom.vision.rwth-aachen.de/data/TrackEval/data.zip).
+Download and extract the data.zip file and place it in the root folder of this repository.
+Only the *data/gt/mot_challenge* subfolder is required to run the examples provided below.
+Next, download the MOT16 sequences from the [MOTChallenge website]([https://motchallenge.net/](https://motchallenge.net/data/MOT16.zip)).
+Extract the sequences and place it the *images* folder such that you get a structure that looks like this: *images/MOT16/train*
 
 ## How to calculate MOTCOM sub-metrics
 
 This snippet will walkthrough how the MOTCOM sub-metrics can be computed, assuming the data has been placed as described earlier.
 
-
 ### Extracting VCOM Features
 
-First the features for the VCOM metric has to be extracted. This is achieved by running the `trackeval/extract_vcom_features.py` script. This requires that the input images have been downloaded from the [MOTChallenge website](https://motchallenge.net/).
+First the features for the VCOM metric has to be extracted. This is achieved by running the `trackeval/extract_vcom_features.py` script. 
 
 For the MOT16 dataset with a ResNet18 extractor network:
 ```bash
