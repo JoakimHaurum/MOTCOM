@@ -161,7 +161,7 @@ class MOTChallengeMOTCOM(_BaseDataset):
             time_key = str(t+1)
             if time_key in read_data.keys():
                 try:
-                    time_data = np.asarray(read_data[time_key], dtype=np.float)
+                    time_data = np.asarray(read_data[time_key], dtype=float)
                 except ValueError:
                     raise MOTCOMEvalException(
                         'Cannot convert gt data for sequence %s to float. Is data corrupted?' % seq)
@@ -341,7 +341,7 @@ class MOTChallengeMOTCOM(_BaseDataset):
             gt_id_map[unique_gt_ids] = np.arange(len(unique_gt_ids))
             for t in range(raw_data['num_timesteps']):
                 if len(data['gt_ids'][t]) > 0:
-                    data['gt_ids'][t] = gt_id_map[data['gt_ids'][t]].astype(np.int)
+                    data['gt_ids'][t] = gt_id_map[data['gt_ids'][t]].astype(int)
 
         # Record overview statistics.
         data['num_gt_dets'] = num_gt_dets
